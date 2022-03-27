@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="15dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        tools:layout_editor_absoluteX="38dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welc"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="georgia"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intro"
+            android:textSize="20sp"
+            android:fontFamily="serif-monospace"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/father"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:importantForAutofill="no"
+                android:hint="@string/father"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/mother"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:importantForAutofill="no"
+                android:hint="@string/mother"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/baby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/gend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/thumb"
+            android:textOff="@string/male"
+            android:textOn="@string/female"
+            android:textSize="15sp"
+            app:showText="true"
+            app:track="@drawable/track"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="35dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="5dp"
+            app:checkedIconTint="@color/white">
+
+            <TextView
+                android:id="@+id/gen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="@string/generate"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="UnusedAttribute" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8673867332833147/8930777691"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

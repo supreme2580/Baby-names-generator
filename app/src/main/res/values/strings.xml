@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Baby name generator</string>
+    <string name="welc">Baby Name Generator</string>
+    <string name="intro">Please fill out the required details to get started</string>
+    <string name="father">Father\'s name</string>
+    <string name="mother">Mother\'s name</string>
+    <string name="generate">Generate name</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+</resources>
